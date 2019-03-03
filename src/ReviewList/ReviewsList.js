@@ -11,11 +11,11 @@ function reducer(state, action) {
 }
 
 const ReviewsList = () => {
-    const [state, dispatch] = useReducer(reducer, {reviews: [{name: 'eran', comment: 'this is great', avatar: 'sdsdsd'}]});
+    const [state, dispatch] = useReducer(reducer, {reviews: [{name: 'eran', comment: 'this is great', id: 1}]});
     return (
         <React.Fragment>
             <div className="review-list-container">
-                {state.reviews.map((review) => <ReviewListItem review={review}/>)}
+                {state.reviews.map((review) => <ReviewListItem key={review.id} name={review.name} id={review.id} comment={review.comment}/>)}
             </div>
         </React.Fragment>);
 };
