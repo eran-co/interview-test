@@ -14,6 +14,7 @@
 
 .review-list-item-details {
     text-align: left;
+    flex-grow: 1;
 }
 
 .review-list-item-details .name {
@@ -22,4 +23,9 @@
 
 .review-list-item-details .comment {
     color: gray;
+}
+
+.review-action-buttons {
+    align-self: flex-start;
+    margin: 10px 5px;
 }

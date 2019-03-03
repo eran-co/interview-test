@@ -4,6 +4,12 @@ import ReviewListItem from "../ReviewListItem/ReviewListItem";
 
 function reducer(state, action) {
     switch (action.type) {
+        case 'deleteReview':
+            return {
+                ...state,
+                reviews: state.reviews.filter(review => review.id !== action.id),
+                activeMovie: undefined
+            };
 
         default:
             throw new Error('Reducer error: action does not exist');
@@ -11,11 +17,14 @@ function reducer(state, action) {
 }
 
 const ReviewsList = () => {
-    const [state, dispatch] = useReducer(reducer, {reviews: [{name: 'eran', comment: 'this is great', id: 1}]});
+    const [state, dispatch] = useReducer(reducer, {reviews: [
+        {name: 'eran', comment: 'this is great', id: 1},
+        {name: 'lala', comment: 'this is great', id: 2}]
+    });
     return (
         <React.Fragment>
             <div className="review-list-container">
-                {state.reviews.map((review) => <ReviewListItem key={review.id} name={review.name} id={review.id} comment={review.comment}/>)}
+                {state.reviews.map((review) => <ReviewListItem key={review.id} name={review.name} id={review.id} comment={review.comment} dispatch={dispatch}/>)}
             </div>
         </React.Fragment>);
 };
