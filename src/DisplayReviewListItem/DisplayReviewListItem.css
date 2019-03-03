@@ -1,0 +1,31 @@
+.review-list-item {
+    display: flex;
+    height: 60px;
+    background: white;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+}
+
+.review-list-item-image {
+    height: 80%;
+    margin: 0 10px;
+}
+
+.review-list-item-details {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.review-list-item-details .name {
+    font-weight: bold;
+}
+
+.review-list-item-details .comment {
+    color: gray;
+}
+
+.review-action-buttons {
+    align-self: flex-start;
+    margin: 10px 5px;
+}
