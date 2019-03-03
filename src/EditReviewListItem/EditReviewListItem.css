@@ -1,0 +1,21 @@
+.edit-review-list-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.edit-review-list-item input {
+    height: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.edit-review-list-item button {
+    margin-bottom: 5px;
+    padding: 5px 5px;
+    width: 100px;
+    align-self: flex-end;
+}
