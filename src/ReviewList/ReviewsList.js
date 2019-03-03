@@ -69,8 +69,9 @@ function reducer(state, action) {
 
 const ReviewsList = () => {
     const [state, dispatch] = useReducer(reducer, {
-        reviews: loadReviewsToLocalStorage()
+        reviews: loadReviewsToLocalStorage() || []
     });
+
     return (
         <React.Fragment>
             <div className="review-list-container">

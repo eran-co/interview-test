@@ -8,7 +8,7 @@ const DisplayReviewListItem = ({id, name, comment, dispatch}) => {
 
     useEffect(() => {
         imgGen({id}).then(avatarURL => setAvatarUrl(avatarURL));
-    }, [])
+    }, []);
 
     return (<div className="review-list-item">
         <img className="review-list-item-image" src={avatarUrl} alt=""/>
