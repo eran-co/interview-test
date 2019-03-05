@@ -8,9 +8,7 @@ function getNextIndex(reviews = []) {
         return 1;
     }
 
-    const max = reviews.reduce(function (a, b) {
-        return Math.max(a.id, b.id);
-    });
+    const max = Math.max(...(reviews.map((review) => review.id)));
 
     return max + 1;
 }
